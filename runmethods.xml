@@ -1,0 +1,22 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Suite 1">
+    <test name="Test 1">
+        <classes>
+<!--            INCLUDING TEST METHODS FROM THE CLASS -->
+            <class name="com.techproed.tests.Day13_WebTables">
+                <methods>
+<!--                    Running ONLY printRows and printCells -->
+                    <include name="printRows"></include>
+                    <include name="printCells"></include>
+                </methods>
+            </class>
+<!--            EXCLUDING TEST METHODS FROM THE CLASS-->
+            <class name="com.techproed.smoketest.Day11_NegativeTest">
+                <methods>
+<!--                    Running ALL except invalidID-->
+                    <exclude name="invalidID"></exclude>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
